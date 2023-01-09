@@ -22,7 +22,7 @@ class DataReaderCommand extends Command
         parent::__construct();
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName('oxac:product-data:read')
@@ -31,7 +31,7 @@ class DataReaderCommand extends Command
             ->addArgument('itemNumber', InputArgument::REQUIRED);
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $itemNumber = (int) $input->getArgument('itemNumber');
         $productData = $this->dataReaderService->readDataByItemNumber($itemNumber);
@@ -55,6 +55,6 @@ class DataReaderCommand extends Command
             );
         }
         
-        return 0;
+        return Command::SUCCESS;
     }
 }
