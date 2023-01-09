@@ -1,0 +1,18 @@
+{
+    "name": "oxid-academy/product-data-reader",
+    "description": "Reads title and price from product selected by item number.",
+    "type": "oxideshop-component",
+    "homepage": "https://www.oxid-esales.com/ressourcen/academy/",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "OXID Academy",
+            "email": "academy@oxid-esales.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "OxidAcademy\\ProductDataReader\\": "./src"
+        }
+    }
+}
