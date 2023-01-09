@@ -13,7 +13,7 @@ composer require oxid-academy/product-data-reader
 ## Usage
 
 ### Service
-The service can be used by [autowiring](https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/module/module_services.html#inject-own-third-party-module-or-shop-services) it in your own service or by using the [container factory](https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/module/module_services.html#use-services-in-standard-classes). Both ways including further information about services in the OXID eShop are described in our [online documentation](https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/module/module_services.html).
+Information about the usage of services in the OXID eShop can be found in our [online documentation](https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/module/module_services.html). The service can be used by [autowiring](https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/module/module_services.html#inject-own-third-party-module-or-shop-services) it in your own service or by using the [container factory](https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/module/module_services.html#use-services-in-standard-classes).
 
 ### Command
 Your can simply run the command on your CLI by using the [OE Console](https://docs.oxid-esales.com/developer/en/latest/development/tell_me_about/console.html):
