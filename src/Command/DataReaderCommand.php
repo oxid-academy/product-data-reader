@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class DataReaderCommand extends Command
 {
-    const MESSAGE_PRODUCTINFO = 'The product %s (%d) costs %.2f EUR.';
+    const MESSAGE_PRODUCTINFO = 'The product %s (%d) costs %.2f EUR. (URL: %s).';
     const MESSAGE_NOMATCH = 'No product was found for item number %d.';
 
     public function __construct(DataReaderService $dataReaderService)
@@ -26,8 +26,8 @@ class DataReaderCommand extends Command
     {
         $this
             ->setName('oxac:product-data:read')
-            ->setDescription('Read title and price of a product.')
-            ->setHelp('Read the title and the final price of a product selected by providing a item number.')
+            ->setDescription('Read data of a product.')
+            ->setHelp('By providing an item number, you retrieve the title, final price and SEO URL of the matching product.')
             ->addArgument('itemNumber', InputArgument::REQUIRED);
     }
 
@@ -42,7 +42,8 @@ class DataReaderCommand extends Command
                     self::MESSAGE_PRODUCTINFO,
                     $productData['title'],
                     $itemNumber,
-                    $productData['price']
+                    $productData['price'],
+                    $productData['url']
                 )
             );
         } else {

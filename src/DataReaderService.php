@@ -35,6 +35,7 @@ class DataReaderService
                 'match' => true,
                 'title' => $product->getFieldData('OXTITLE'),
                 'price' => $product->getPrice()->getPrice(),
+                'url' => $product->getLink($product->getLanguage()),
             ];
         } else {
             return [
