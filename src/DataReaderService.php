@@ -9,9 +9,9 @@ use OxidEsales\EshopCommunity\Internal\Framework\Database\QueryBuilderFactoryInt
 
 class DataReaderService
 {
-    public function __construct(QueryBuilderFactoryInterface $queryBuilderFactory)
+    public function __construct(private QueryBuilderFactoryInterface $queryBuilderFactory)
     {
-        $this->queryBuilderFactory = $queryBuilderFactory;
+
     }
 
     public function readDataByItemNumber(int $itemNumber): array
