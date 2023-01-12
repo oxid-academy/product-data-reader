@@ -12,8 +12,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class DataReaderCommand extends Command
 {
-    const MESSAGE_PRODUCTINFO = 'The product %s (%d) costs %.2f EUR. (URL: %s).';
-    const MESSAGE_NOMATCH = 'No product was found for item number %d.';
+    const MESSAGE_PRODUCT_INFO = 'The product %s (%d) costs %.2f EUR. (URL: %s).';
+    const MESSAGE_NO_MATCH = 'No product was found for item number %d.';
 
     public function __construct(DataReaderService $dataReaderService)
     {
@@ -39,7 +39,7 @@ class DataReaderCommand extends Command
         if ($productData['match']) {
             $output->writeln(
                 sprintf(
-                    self::MESSAGE_PRODUCTINFO,
+                    self::MESSAGE_PRODUCT_INFO,
                     $productData['title'],
                     $itemNumber,
                     $productData['price'],
@@ -49,7 +49,7 @@ class DataReaderCommand extends Command
         } else {
             $output->writeln(
                 sprintf(
-                    self::MESSAGE_NOMATCH,
+                    self::MESSAGE_NO_MATCH,
                     $itemNumber,
                 )
             );
