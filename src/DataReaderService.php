@@ -11,7 +11,7 @@ class DataReaderService
 {
     public function __construct(private QueryBuilderFactoryInterface $queryBuilderFactory) {}
 
-    public function readDataByItemNumber(int $itemNumber): array
+    public function readDataByItemNumber(string $itemNumber): array
     {
         $product = oxNew(Article::class);
         $tableName = $product->getViewName();
