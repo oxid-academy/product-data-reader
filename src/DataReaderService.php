@@ -30,7 +30,7 @@ class DataReaderService
         
             return [
                 'match' => true,
-                'title' => $product->getFieldData('OXTITLE'),
+                'title' => $product->getFieldData('oxtitle'),
                 'price' => $product->getPrice()->getPrice(),
                 'url' => $product->getLink($product->getLanguage()),
             ];
