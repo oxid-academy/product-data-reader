@@ -15,10 +15,8 @@ class DataReaderCommand extends Command
     const MESSAGE_PRODUCT_INFO = 'The product %s (%d) costs %.2f EUR. (URL: %s).';
     const MESSAGE_NO_MATCH = 'No product was found for item number %d.';
 
-    public function __construct(DataReaderService $dataReaderService)
+    public function __construct(private DataReaderService $dataReaderService)
     {
-        $this->dataReaderService = $dataReaderService;
-
         parent::__construct();
     }
 
