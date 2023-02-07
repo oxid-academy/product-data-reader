@@ -33,7 +33,7 @@ class DataReaderCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $itemNumber = (int) $input->getArgument('itemNumber');
+        $itemNumber = (string) $input->getArgument('itemNumber');
         $productData = $this->dataReaderService->readDataByItemNumber($itemNumber);
 
         if ($productData['match']) {
