@@ -1,9 +1,12 @@
 services:
-  OxidAcademy\ProductDataReader\DataReaderService:
+
+  _defaults:
+    public: false
     autowire: true
+
+  OxidAcademy\ProductDataReader\DataReaderService:
     public: true
 
   OxidAcademy\ProductDataReader\Command\DataReaderCommand:
-    autowire: true
     tags:
     - { name: 'console.command' }
