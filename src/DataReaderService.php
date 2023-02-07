@@ -13,15 +13,14 @@ class DataReaderService
 
     public function readDataByItemNumber(string $itemNumber): array
     {
-        $product = oxNew(Article::class);
-        $tableName = $product->getViewName();
-
         $queryBuilder = $this->queryBuilderFactory->create();
+        $product = oxNew(Article::class);
+
         $queryBuilder
             ->select('OXID')
-            ->from($tableName)
-            ->where('OXARTNUM = :itemNumber')
-            ->andWhere($product->getSqlActiveSnippet())
+            ->from($product->getViewName())
+            ->where($product->getSqlActiveSnippet())
+            ->andWhere('OXARTNUM = :itemNumber')
             ->setParameter('itemNumber', $itemNumber);
         $result = $queryBuilder->execute()->fetchAssociative();
 
