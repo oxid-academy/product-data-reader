@@ -25,7 +25,7 @@ class DataReaderCommand extends Command
         $this
             ->setName('oxac:product-data:read')
             ->setDescription('Read data of a product.')
-            ->setHelp('By providing an item number, you retrieve the title, final price and SEO URL of the matching product.')
+            ->setHelp('By providing an item number, you receive the title, final price and SEO URL of the matching product.')
             ->addArgument('itemNumber', InputArgument::REQUIRED);
     }
 
