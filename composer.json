@@ -10,6 +10,9 @@
             "email": "academy@oxid-esales.com"
         }
     ],
+    "require": {
+        "php": "^8.1"
+    },
     "autoload": {
         "psr-4": {
             "OxidAcademy\\ProductDataReader\\": "src/"
