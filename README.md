@@ -13,10 +13,12 @@ This extension is an **OXID eShop Component**. It introduces a service to read t
 
 ### Versions
 
+- 2.x.x version is compatible with OXID eShop 7.1.
 - 1.x.x version is compatible with OXID eShop 7.1 and 7.0.
 
 ### Branches
 
+- b-7.1.x branch is compatible with OXID eShop compilation b-7.1.x.
 - b-7.0.x branch is compatible with OXID eShop compilation b-7.1.x and b-7.0.x.
 
 ## Installation
@@ -25,16 +27,16 @@ This extension is an **OXID eShop Component**. It introduces a service to read t
 
 In your shop's root directory, execute the following Composer command:
 ```console
-composer require oxid-academy/product-data-reader:^1.0.0
+composer require oxid-academy/product-data-reader:^2.0.0
 ```
 
 ### Development
 
 In your shop's root directory, execute the following commands:
 ```console
-git clone -b b-7.0.x https://github.com/oxid-academy/product-data-reader.git ./EXTENSIONS/product-data-reader
+git clone -b b-7.1.x https://github.com/oxid-academy/product-data-reader.git ./EXTENSIONS/product-data-reader
 composer config repositories.oxac-pdr path ./EXTENSIONS/product-data-reader
-composer require oxid-academy/product-data-reader:dev-b-7.0.x
+composer require oxid-academy/product-data-reader:dev-b-7.1.x
 ```
 
 ## Usage

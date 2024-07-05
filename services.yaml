@@ -3,7 +3,7 @@ services:
     public: false
     autowire: true
 
-  OxidAcademy\ProductDataReader\DataReaderService:
+  OxidAcademy\ProductDataReader\Service\DataReader:
     public: true
 
   OxidAcademy\ProductDataReader\Command\DataReaderCommand:

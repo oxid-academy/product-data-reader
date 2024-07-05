@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace OxidAcademy\ProductDataReader\Command;
 
-use OxidAcademy\ProductDataReader\DataReaderService;
+use OxidAcademy\ProductDataReader\Service\DataReader;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -15,7 +15,7 @@ class DataReaderCommand extends Command
     const MESSAGE_PRODUCT_INFO = 'The product %s (%s) costs %.2f EUR. (URL: %s).';
     const MESSAGE_NO_MATCH = 'No product was found for item number %s.';
 
-    public function __construct(private DataReaderService $dataReaderService)
+    public function __construct(private DataReader $dataReader)
     {
         parent::__construct();
     }
@@ -32,7 +32,7 @@ class DataReaderCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $itemNumber = (string) $input->getArgument('itemNumber');
-        $productData = $this->dataReaderService->readDataByItemNumber($itemNumber);
+        $productData = $this->dataReader->readDataByItemNumber($itemNumber);
 
         if ($productData['match']) {
             $output->writeln(

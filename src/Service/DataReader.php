@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace OxidAcademy\ProductDataReader;
+namespace OxidAcademy\ProductDataReader\Service;
 
 use OxidEsales\Eshop\Application\Model\Article;
 use OxidEsales\EshopCommunity\Internal\Framework\Database\QueryBuilderFactoryInterface;
 
-class DataReaderService
+class DataReader
 {
     public function __construct(private QueryBuilderFactoryInterface $queryBuilderFactory) {}
 
