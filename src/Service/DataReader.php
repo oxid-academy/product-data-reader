@@ -21,6 +21,7 @@ class DataReader
             ->from($product->getViewName())
             ->where($product->getSqlActiveSnippet())
             ->andWhere('OXARTNUM = :itemNumber')
+            ->andWhere('OXARTNUM != ""')
             ->setParameter('itemNumber', $itemNumber);
         $result = $queryBuilder->execute()->fetchAssociative();
 
